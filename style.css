@@ -1,0 +1,8 @@
+.container{
+    border-radius : 5px;
+    background : white;
+    box-shadow : 3px 3px 10px 0px rgba(50,50,50,0.1);
+    width : 16rem;
+    overflow : hidden;
+    margin : 10px;
+    };

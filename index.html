@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<script>    
+    const countries =[
+{
+  image :"https://flagpedia.net/data/flags/h160/au.png",
+  country : "Australia",
+  population :"91,657,312",
+  region : "Aus",
+  capital : "Canberra"
+  
+},
+{
+  image : "https://flagpedia.net/data/flags/h160/in.png",
+  country : "India",
+  population :"1,3179,984,812",
+  region : "Asia",
+  capital : "New Delhi"
+  
+},
+{
+  image : "https://flagpedia.net/data/flags/h160/us.png",
+  country : "United States of America",
+  population :"323,947,000",
+  region : "Americas",
+  capital : "Washington.D.C"
+},
+{
+  image : "https://flagpedia.net/data/flags/h160/de.png",
+  country : "Germany",
+  population :"81,770,900",
+  region : "Europe",
+  capital : "Berlin" 
+}
+]
+
+countries.forEach(country =>{
+  
+const img = document.createElement("img");
+img.setAttribute("src", country.image);
+
+img.style.height = "10rem";
+img.style.width = "100%";
+
+const infoContainer = document.createElement("div");
+infoContainer.innerHTML = `
+<h3>${country.country}</h3>
+<p><strong>Population : </strong>${country.population}</p>
+<p><strong>Region :</strong>${country.region}</p>
+<p><strong>Capital :</strong>${country.capital}</p>
+`;
+infoContainer.style.background = "white";
+infoContainer.style.padding = "10px";
+
+const container = document.createElement("div");
+container.setAttribute("class", "container");
+container.append(img, infoContainer);
+document.body.append(container);
+document.body.style.background = "whitesmoke";
+document.body.style.display = "flex";
+document.body.style.flexWrap = "wrap";
+document.body.style.justifyContent = "space-evenly";  
+  
+});
+</script>
+</body>
+</html>
